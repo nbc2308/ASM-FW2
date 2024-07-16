@@ -1,0 +1,13 @@
+$font-poppins: "Poppins", sans-serif;
+$font-baloo: "Baloo", sans-serif;
+
+body {
+  font-family: $font-poppins;
+}
+h1 {
+  font-family: $font-baloo;
+}
+
+.menu-item:hover .hidden {
+  display: block;
+}
