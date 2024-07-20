@@ -23,16 +23,19 @@ const Contact = () => {
             </p>
           </div>
 
-          <form className="mt-[53px] relative w-[400px] h-[62px] ">
-            <div className="absolute inset-y-0 left-0 flex items-center p-2 bg-[#F8F8F8]">
-              <Mail className="text-[#6C777C]" />
-            </div>
+          <form
+            autoComplete="off"
+            className="ml-[90px] flex relative justify-center bg-white items-center w-[500px] h-[60px] p-3"
+          >
+            <Mail />
             <input
-              className="bg-white w-full h-full pl-12"
-              type="text"
-              placeholder="Enter your email"
+              className="w-full h-full outline-none border-none mx-5"
+              type="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              placeholder="youremail123@gmail.com"
             />
-            <button className="border-2 w-[162px] h-[55px] absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#656C66] text-[12px] font-semibold text-white">
+            <button className="hover:bg-[#4E7C32] absolute right-0 bottom-[-30px] p-0 rounded-none border-none w-[160px] h-[52px] bg-[#656C66] text-white font-semibold tracking-[2px] ">
               ABONNIEREN
             </button>
           </form>
