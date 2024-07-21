@@ -6,7 +6,7 @@ const Nav = () => {
       <nav>
         <ul className="flex space-x-6 text-white text-[13.64px] font-semibold pt-3 justify-center">
           <li>
-            <NavLink to="/" className="flex items-center">
+            <NavLink to="/products" className="flex items-center">
               Beleuchtung <ChevronDown className="ml-1 w-4 h-4" />
             </NavLink>
           </li>

@@ -1,4 +1,4 @@
-import payment from "../assets/image/footer/icons_payment 1.png";
+import payment from "@/assets/image/footer/icons_payment 1.png";
 import { MoveUp } from "lucide-react";
 
 const Footer = () => {

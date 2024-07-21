@@ -1,4 +1,4 @@
-import { Contact } from "../../components";
+import { Contact } from "@/components";
 import Productitems from "./productitems";
 import ProductTop from "./products-top";
 

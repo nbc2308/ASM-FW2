@@ -1,5 +1,3 @@
-import React from "react";
-
 const Banner = () => {
   return (
     <div className="w-full h-[592px] bg-gradient-to-r from-[#B5DCB0] to-[#F9F3EE] pt-[147px] pl-[186px] ">

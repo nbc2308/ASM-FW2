@@ -1,7 +1,7 @@
-import img1 from "../assets/image/bestseller/michigan_mini_03 1.png";
-import img2 from "../assets/image/bestseller/hththr 1.png";
-import img3 from "../assets/image/bestseller/hhy 1.png";
-import img4 from "../assets/image/bestseller/fgrgthht 1.png";
+import img1 from "@/assets/image/bestseller/michigan_mini_03 1.png";
+import img2 from "@/assets/image/bestseller/hththr 1.png";
+import img3 from "@/assets/image/bestseller/hhy 1.png";
+import img4 from "@/assets/image/bestseller/fgrgthht 1.png";
 
 const BestSeller = () => {
   return (

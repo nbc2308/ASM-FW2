@@ -1,12 +1,12 @@
-import img1 from "../../assets/image/productItems/gfree 1.png";
-import img2 from "../../assets/image/productItems/ffef 1.png";
-import img3 from "../../assets/image/productItems/feww 1.png";
-import img4 from "../../assets/image/productItems/ntghtg 1.png";
-import img5 from "../../assets/image/productItems/topf-eckig-30l 1.png";
-import img6 from "../../assets/image/productItems/vdsads 1.png";
-import img7 from "../../assets/image/productItems/fes 1.png";
-import img8 from "../../assets/image/productItems/vsd 1.png";
-import img9 from "../../assets/image/productItems/ntghtg 2.png";
+import img1 from "@/assets/image/productItems/gfree 1.png";
+import img2 from "@/assets/image/productItems/ffef 1.png";
+import img3 from "@/assets/image/productItems/feww 1.png";
+import img4 from "@/assets/image/productItems/ntghtg 1.png";
+import img5 from "@/assets/image/productItems/topf-eckig-30l 1.png";
+import img6 from "@/assets/image/productItems/vdsads 1.png";
+import img7 from "@/assets/image/productItems/fes 1.png";
+import img8 from "@/assets/image/productItems/vsd 1.png";
+import img9 from "@/assets/image/productItems/ntghtg 2.png";
 
 import ShortBy from "./shortby";
 import Category from "./category";
