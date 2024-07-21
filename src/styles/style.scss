@@ -11,3 +11,7 @@ h1 {
 .menu-item:hover .hidden {
   display: block;
 }
+
+.custom-number-input input:focus {
+  outline: none;
+}
