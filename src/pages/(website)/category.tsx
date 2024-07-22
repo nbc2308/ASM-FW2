@@ -1,3 +1,6 @@
+import img1 from "@/assets/image/annie-spratt-ncQ2sguVlgo-unsplash 1.png";
+import FilterProduct from "./filter";
+
 const Category = () => {
   return (
     <div className="ml-[200px]">
@@ -49,6 +52,24 @@ const Category = () => {
             Pflanzschalen
           </label>
         </div>
+      </div>
+
+      <div className="relative w-[213px] h-[262px] mt-[33px] group">
+        <img
+          src={img1}
+          alt="Product Image"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="text-white text-[18px] font-bold mt-[32px] ml-[24px]">
+            Grow your own favourite plant
+          </p>
+          <button className="text-white mt-[132px]">Shop Now</button>
+        </div>
+      </div>
+
+      <div>
+        <FilterProduct />
       </div>
     </div>
   );

@@ -15,3 +15,22 @@ h1 {
 .custom-number-input input:focus {
   outline: none;
 }
+
+.range-slider::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  background: #665345; /* Customize the thumb color */
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%; /* Make the thumb circular */
+}
+
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #4e7c32; /* Customize the thumb color */
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%; /* Make the thumb circular */
+}
