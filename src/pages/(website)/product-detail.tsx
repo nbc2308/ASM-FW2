@@ -1,6 +1,7 @@
 import { Contact } from "@/components";
 import SelectImage from "./SelectImage";
 import Productinformation from "./productinformation";
+import Rate from "./rate";
 
 const ProductDetail = () => {
   return (
@@ -31,6 +32,8 @@ const ProductDetail = () => {
           scrambled i
         </p>
       </div>
+
+      <Rate />
       <Contact />
     </>
   );
