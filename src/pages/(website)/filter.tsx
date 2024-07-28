@@ -15,8 +15,6 @@ const FilterProduct = () => {
             className="w-full h-[9px] bg-[#4E7C32] appearance-none cursor-pointer range-slider rounded-md"
             style={{
               outline: "none",
-              "-webkit-appearance": "none",
-              "-moz-appearance": "none",
             }}
           />
         </div>
@@ -39,8 +37,6 @@ const FilterProduct = () => {
             className="w-full h-[9px] bg-[#4E7C32] appearance-none cursor-pointer range-slider rounded-md"
             style={{
               outline: "none",
-              "-webkit-appearance": "none",
-              "-moz-appearance": "none",
             }}
           />
         </div>

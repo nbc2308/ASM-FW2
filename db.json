@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Product 1 new",
+      "price": 100,
+      "category": "1",
+      "image": "https://picsum.photos/200/200",
+      "id": 1
+    },
+    {
+      "name": "Sản phẩm 2",
+      "price": 300,
+      "category": "4",
+      "image": "https://picsum.photos/200/200",
+      "id": 2
+    }
+  ],
+  "category": [
+    {
+      "name": "Danh mục 1",
+      "description": "mo ta 1",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Danh mục 2",
+      "description": "mo ta"
+    },
+    {
+      "name": "Danh muc 3",
+      "description": "mo ta",
+      "id": 3
+    },
+    {
+      "name": "Danh mục 4",
+      "description": "danh muc",
+      "id": 4
+    }
+  ]
+}

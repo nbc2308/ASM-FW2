@@ -34,3 +34,46 @@ h1 {
   appearance: none;
   border-radius: 50%; /* Make the thumb circular */
 }
+
+.slick-slider .slick-prev {
+  left: 65px;
+  z-index: 999;
+}
+
+.slick-slider .slick-next {
+  right: 65px;
+  z-index: 999;
+}
+
+.slick-slider button {
+  width: 30px;
+  height: 30px;
+}
+
+.slick-slider button::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-slider .slick-prev::before {
+  background-image: url("/src/assets/svg/banner/left.svg");
+}
+
+.slick-slider .slick-next::before {
+  background-image: url("/src/assets/svg/banner/right.svg");
+}
+main {
+  background-image: url("/src/assets/svg/Vector2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left 650px;
+  backdrop-filter: 125px;
+}
+
+main.home {
+  background-color: #f8f4f0;
+}
