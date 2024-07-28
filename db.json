@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "name": "Product 1 new",
-      "price": 100,
+      "name": "Product 1  new 12121",
+      "price": 10021,
       "category": "1",
       "image": "https://picsum.photos/200/200",
       "id": 1
     },
     {
-      "name": "Sản phẩm 2",
+      "name": "Sản phẩm 2 new",
       "price": 300,
       "category": "4",
       "image": "https://picsum.photos/200/200",

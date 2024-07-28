@@ -1,14 +1,10 @@
+import img1 from "@/assets/image/annie-spratt-ncQ2sguVlgo-unsplash 1.png";
 import { ICategories } from "@/common/types/category";
 import { GetAllCate } from "@/services/category";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
 import FilterProduct from "./filter";
-import img1 from "@/assets/image/annie-spratt-ncQ2sguVlgo-unsplash 1.png";
-import { GetProductsByCategory } from "@/services/product";
 
 const Category = () => {
-  const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
-
   const {
     data: cate = [],
     isLoading,
@@ -17,21 +13,6 @@ const Category = () => {
     queryKey: ["CATEGORY_KEY"],
     queryFn: GetAllCate,
   });
-
-  const { data: products, refetch } = useQuery({
-    queryKey: ["PRODUCTS", selectedCategories],
-    queryFn: () => GetProductsByCategory(selectedCategories),
-    enabled: selectedCategories.length > 0,
-  });
-
-  const handleCheckboxChange = async (categoryId: number) => {
-    setSelectedCategories((prevSelected) =>
-      prevSelected.includes(categoryId)
-        ? prevSelected.filter((id) => id !== categoryId)
-        : [...prevSelected, categoryId]
-    );
-    await refetch();
-  };
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading categories</div>;
@@ -46,8 +27,6 @@ const Category = () => {
               type="checkbox"
               id={`checkbox${item.id}`}
               className="form-checkbox h-5 w-5 text-blue-600"
-              checked={selectedCategories.includes(item.id)}
-              onChange={() => handleCheckboxChange(item.id)}
             />
             <label
               htmlFor={`checkbox${item.id}`}

@@ -16,10 +16,7 @@ import { useMutation } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-type Inputs = {
-  name: string;
-  description: string;
-};
+type Inputs = Pick<ICategories, "name" | "description">;
 
 const CateAdd = () => {
   const naviagate = useNavigate();

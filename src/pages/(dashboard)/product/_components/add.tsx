@@ -28,7 +28,7 @@ import {
 
 type Inputs = {
   name: string;
-  category?: string; // Use string to match SelectItem value
+  category?: string;
   price: number;
   image: string;
 };
@@ -124,7 +124,11 @@ const ProductAdd = () => {
                       {categories.map((category) => (
                         <SelectItem
                           key={category.id}
-                          value={category.id.toString()}
+                          value={
+                            category.id !== undefined
+                              ? category.id.toString()
+                              : ""
+                          }
                         >
                           {category.name}
                         </SelectItem>

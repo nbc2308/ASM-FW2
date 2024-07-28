@@ -62,15 +62,6 @@ const ProductEdit = () => {
   const { data: product } = useQuery({
     queryKey: ["PRODUCT", id],
     queryFn: () => GetProductById(id!),
-    onSuccess: (data) => {
-      form.reset({
-        name: data.name,
-        price: data.price,
-        category: data.category?.toString(),
-        image: data.image,
-      });
-    },
-    enabled: !!id,
   });
 
   useEffect(() => {
