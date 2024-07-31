@@ -20,6 +20,7 @@ import { useNavigate, useParams } from "react-router-dom";
 type Inputs = {
   name: string;
   description: string;
+  image: string;
 };
 
 const CateEdit = () => {
@@ -30,6 +31,7 @@ const CateEdit = () => {
     defaultValues: {
       name: "",
       description: "",
+      image: "",
     },
   });
 
@@ -43,6 +45,7 @@ const CateEdit = () => {
       form.reset({
         name: cate.name,
         description: cate.description,
+        image: cate.image,
       });
     }
   }, [cate, form]);
@@ -91,6 +94,19 @@ const CateEdit = () => {
                 <FormLabel htmlFor="description">Mo ta danh muc</FormLabel>
                 <FormControl>
                   <Input {...field} id="description" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="image"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="image">Ảnh</FormLabel>
+                <FormControl>
+                  <Input {...field} id="image" />
                 </FormControl>
                 <FormMessage />
               </FormItem>

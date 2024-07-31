@@ -69,6 +69,12 @@ const ProductList = () => {
                   Category
                 </th>
                 <th className="py-3 px-6 font-bold uppercase text-sm text-left">
+                  Description
+                </th>
+                <th className="py-3 px-6 font-bold uppercase text-sm text-left">
+                  Quantity
+                </th>
+                <th className="py-3 px-6 font-bold uppercase text-sm text-left">
                   Action
                 </th>
               </tr>
@@ -85,8 +91,12 @@ const ProductList = () => {
                     <img width={100} src={product.image} />
                   </td>
                   <td className="py-3 px-6 text-left">
-                    {getCategoryName(product.category?.toString())}
+                    {getCategoryName(product.category_id?.toString())}
                   </td>
+                  <td className="py-3 px-6 text-left w-[300px]">
+                    {product.description}
+                  </td>
+                  <td className="py-3 px-6 text-left">{product.quantity}</td>
                   <td className="py-3 px-6 text-left">
                     <Link
                       to={`/admin/products/${product.id}/edit`}

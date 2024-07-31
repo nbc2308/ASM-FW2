@@ -1,7 +1,19 @@
+import { GetProductById } from "@/services/product";
+import { useQuery } from "@tanstack/react-query";
 import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Productinformation = () => {
+  const { id } = useParams();
+  const {
+    data: product,
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["PRODUCT_KEY", id],
+    queryFn: () => GetProductById(id as string),
+  });
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => {
@@ -13,23 +25,25 @@ const Productinformation = () => {
       setQuantity(quantity - 1);
     }
   };
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading product details</div>;
   return (
     <div>
       <div className="infor ml-[230px] w-[590px]">
         <p className="text-[#4E7C32] text-[14px] font-bold mb-[20px]">Plant</p>
 
         <h2 className="prd-name text-[#1D2025] text-[44px] font-bold ">
-          Square cultivation pots 0.27 to 2 litres
+          {product.name}
         </h2>
 
         <p className="des text-[#68707D] text-[16px] font-medium pt-[23px]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the
+          {product.description}
         </p>
 
         <span className="price flex mt-[31px]">
-          <p className="price text-[#1D2025] text-[30px] font-bold">$125.00</p>
+          <p className="price text-[#1D2025] text-[30px] font-bold">
+            ${product.price}
+          </p>
           <div className="discound flex justify-center items-center w-[51px] h-[28px] bg-[#FFEDE0] text-[#505F4E] font-bold text-[16px] ml-[16px]">
             50%
           </div>

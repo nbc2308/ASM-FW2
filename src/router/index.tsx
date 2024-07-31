@@ -9,6 +9,7 @@ import ProductManagement from "@/pages/(dashboard)/product/page";
 import HomePage from "@/pages/(website)/home";
 import Product from "@/pages/(website)/product";
 import ProductDetail from "@/pages/(website)/product-detail";
+import Productitems from "@/pages/(website)/productitems";
 import { Route, Routes } from "react-router-dom";
 
 const Router = () => {
@@ -17,8 +18,9 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="/search" element={<Productitems />} />
           <Route path="/products" element={<Product />} />
-          <Route path="/product-detail" element={<ProductDetail />} />
+          <Route path="/product-detail/:id" element={<ProductDetail />} />
         </Route>
         <Route path="admin" element={<LayoutAdmin />}>
           <Route path="products" element={<ProductManagement />} />

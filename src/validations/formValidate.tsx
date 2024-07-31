@@ -5,10 +5,12 @@ export const productShema = Joi.object({
   price: Joi.number().required(),
   description: Joi.string(),
   image: Joi.string(),
-  category: Joi.string().required(),
+  quantity: Joi.number().required(),
+  category_id: Joi.string().required(),
 });
 
 export const categoryShema = Joi.object({
   name: Joi.string().required(),
   description: Joi.string(),
+  image: Joi.string(),
 });

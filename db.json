@@ -3,38 +3,97 @@
     {
       "name": "Product 1  new 12121",
       "price": 10021,
-      "category": "1",
+      "category_id": "1",
       "image": "https://picsum.photos/200/200",
+      "quantity": 4,
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1",
       "id": 1
     },
     {
       "name": "Sản phẩm 2 new",
       "price": 300,
-      "category": "4",
+      "category_id": "2",
       "image": "https://picsum.photos/200/200",
+      "quantity": 1,
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
       "id": 2
+    },
+    {
+      "name": "Sản phẩm 3 new",
+      "price": 400,
+      "category_id": "3",
+      "image": "https://picsum.photos/200/200",
+      "quantity": 1,
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+      "id": 3
+    },
+    {
+      "name": "Sản phẩm 4 new",
+      "price": 300,
+      "category_id": "5",
+      "quantity": 1,
+      "image": "https://picsum.photos/200/200",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+      "id": 4
+    },
+    {
+      "name": "sản phẩm 5",
+      "price": 211,
+      "category_id": "6",
+      "quantity": 1,
+      "image": "https://picsum.photos/200/200",
+      "description": "mo ta",
+      "id": 5
     }
   ],
   "category": [
     {
-      "name": "Danh mục 1",
-      "description": "mo ta 1",
+      "name": "danh muc 1 ",
+      "description": "mo ta",
+      "image": "https://picsum.photos/500",
       "id": 1
     },
     {
-      "id": 2,
-      "name": "Danh mục 2",
-      "description": "mo ta"
+      "name": "danh muc 2",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
+      "id": 2
     },
     {
-      "name": "Danh muc 3",
-      "description": "mo ta",
+      "name": "danh muc 3",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
       "id": 3
     },
     {
-      "name": "Danh mục 4",
-      "description": "danh muc",
+      "name": "danh muc 4",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
       "id": 4
+    },
+    {
+      "name": "danh muc 5",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
+      "id": 5
+    },
+    {
+      "name": "danh muc 6",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
+      "id": 6
+    },
+    {
+      "name": "danh muc 7",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
+      "id": 7
+    },
+    {
+      "name": "danh muc 8",
+      "description": "mo ta ",
+      "image": "https://picsum.photos/500",
+      "id": 8
     }
   ]
 }

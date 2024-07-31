@@ -3,5 +3,7 @@ export interface IProduct {
   name: string;
   price: number;
   image: string;
-  category?: string;
+  quantity: number;
+  category_id?: string | number;
+  description: string;
 }

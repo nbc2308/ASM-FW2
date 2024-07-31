@@ -16,7 +16,7 @@ import { useMutation } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-type Inputs = Pick<ICategories, "name" | "description">;
+type Inputs = Pick<ICategories, "name" | "description" | "image">;
 
 const CateAdd = () => {
   const naviagate = useNavigate();
@@ -25,6 +25,7 @@ const CateAdd = () => {
     defaultValues: {
       name: "",
       description: "",
+      image: "",
     },
   });
 
@@ -72,6 +73,19 @@ const CateAdd = () => {
                 <FormLabel htmlFor="description">Mo ta danh muc</FormLabel>
                 <FormControl>
                   <Input {...field} id="description" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="image"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="image">Ảnh</FormLabel>
+                <FormControl>
+                  <Input {...field} id="image" />
                 </FormControl>
                 <FormMessage />
               </FormItem>

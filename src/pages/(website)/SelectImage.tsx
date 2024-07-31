@@ -1,18 +1,30 @@
-import img2 from "@/assets/image/pr-detail/20210212_140441_InPixio 1.png";
-import img1 from "@/assets/image/pr-detail/ffef 2.png";
-import img3 from "@/assets/image/pr-detail/ffef 3.png";
-import { useState } from "react";
+import { GetProductById } from "@/services/product";
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 
 const SelectImage = () => {
-  const [mainImage, setMainImage] = useState(img1);
-  const [selectedImage, setSelectedImage] = useState(img1);
+  const { id } = useParams();
+  const {
+    data: product,
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["PRODUCT_KEY", id],
+    queryFn: () => GetProductById(id as string),
+  });
 
-  const images = [img1, img2, img3];
+  // const [mainImage, setMainImage] = useState(product.image);
+  // const [selectedImage, setSelectedImage] = useState(product.image);
 
-  const handleImageClick = (image: string) => {
-    setMainImage(image);
-    setSelectedImage(image);
-  };
+  // const images = [product.image];
+
+  // const handleImageClick = (image: string) => {
+  //   setMainImage(image);
+  //   setSelectedImage(image);
+  // };
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading product details</div>;
   return (
     <div>
       <div className="flex flex-col items-center justify-center">
@@ -21,23 +33,23 @@ const SelectImage = () => {
             width={300}
             height={300}
             className="object-cover"
-            src={mainImage}
+            src={product.image}
             alt="Main"
           />
         </div>
-        <div className="thumbnails flex space-x-4">
+        {/* <div className="thumbnails flex space-x-4">
           {images.map((image, index) => (
             <img
               key={index}
               width={100}
               height={100}
-              className={`object-cover cursor-pointer border-2 ${selectedImage === image ? "border-blue-500" : "border-transparent"}`}
+              // className={`object-cover cursor-pointer border-2 ${selectedImage === image ? "border-blue-500" : "border-transparent"}`}
               src={image}
               alt={`Thumbnail ${index + 1}`}
-              onClick={() => handleImageClick(image)}
+              // onClick={() => handleImageClick(image)}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

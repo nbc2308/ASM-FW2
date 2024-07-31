@@ -1,12 +1,26 @@
-import img1 from "@/assets/image/productItems/ffef 1.png";
-import { Star } from "lucide-react";
 import img2 from "@/assets/image/pr-detail/Group 6.png";
+import { GetProductById } from "@/services/product";
+import { useQuery } from "@tanstack/react-query";
+import { Star } from "lucide-react";
+import { useParams } from "react-router-dom";
 
 const Rate = () => {
+  const { id } = useParams();
+  const {
+    data: product,
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["PRODUCT_KEY", id],
+    queryFn: () => GetProductById(id as string),
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading product details</div>;
   return (
     <>
       <div className="mt-[57px] flex">
-        <img src={img1} />
+        <img src={product.image} />
         <div className="flex flex-col items-center mt-[72px]">
           <div className="icons flex items-center justify-center space-x-2">
             <Star />

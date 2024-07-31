@@ -47,6 +47,9 @@ const CateList = () => {
                   Description
                 </th>
                 <th className="py-3 px-6 font-bold uppercase text-sm text-left">
+                  image
+                </th>
+                <th className="py-3 px-6 font-bold uppercase text-sm text-left">
                   Action
                 </th>
               </tr>
@@ -59,6 +62,9 @@ const CateList = () => {
                 >
                   <td className="py-3 px-6 text-left">{cate.name}</td>
                   <td className="py-3 px-6 text-left">{cate.description}</td>
+                  <td className="py-3 px-6 text-left">
+                    <img width={100} src={cate.image} />
+                  </td>
                   <td className="py-3 px-6 text-left">
                     <Link
                       to={`/admin/categories/${cate.id}/edit`}

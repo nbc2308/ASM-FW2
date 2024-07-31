@@ -10,6 +10,18 @@ export const GetAllProducts = async () => {
   }
 };
 
+export const SearchProducts = async (searchTerm: string) => {
+  try {
+    const { data } = await instance.get(
+      `/products?name_like=${encodeURIComponent(searchTerm)}`
+    );
+    return data;
+  } catch (error) {
+    console.error("Error searching products:", error);
+    throw new Error("Error searching products");
+  }
+};
+
 export const CreateProduct = async (product: IProduct) => {
   try {
     const { data } = await instance.post(`/products`, product);
@@ -54,4 +66,9 @@ export const GetProductsByCategory = async (categoryIds: number[]) => {
     console.error("Error fetching products:", error);
     throw new Error("Failed to fetch products");
   }
+};
+
+export const searchProducts = async (query: string) => {
+  const { data } = await instance.get(`/products?name_like=${query}`);
+  return data;
 };

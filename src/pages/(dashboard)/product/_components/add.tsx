@@ -28,9 +28,11 @@ import {
 
 type Inputs = {
   name: string;
-  category?: string;
+  category_id?: string | number;
   price: number;
   image: string;
+  description: string;
+  quantity: number;
 };
 
 const ProductAdd = () => {
@@ -40,8 +42,10 @@ const ProductAdd = () => {
     defaultValues: {
       name: "",
       price: 0,
-      category: "",
+      category_id: "",
       image: "",
+      description: "",
+      quantity: 0,
     },
   });
 
@@ -108,7 +112,7 @@ const ProductAdd = () => {
           />
           <FormField
             control={form.control}
-            name="category"
+            name="category_id"
             render={({ field }) => (
               <FormItem>
                 <FormLabel htmlFor="category">Danh mục</FormLabel>
@@ -148,6 +152,32 @@ const ProductAdd = () => {
                 <FormLabel htmlFor="image">Ảnh</FormLabel>
                 <FormControl>
                   <Input {...field} id="image" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="description">Description</FormLabel>
+                <FormControl>
+                  <Input {...field} id="description" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="quantity"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="quantity">Quantity</FormLabel>
+                <FormControl>
+                  <Input {...field} id="quantity" />
                 </FormControl>
                 <FormMessage />
               </FormItem>

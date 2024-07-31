@@ -28,9 +28,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 type Inputs = {
   name: string;
-  category?: string;
+  category_id: string | number;
   price: number;
   image: string;
+  description: string;
+  quantity: number;
 };
 
 const ProductEdit = () => {
@@ -41,8 +43,10 @@ const ProductEdit = () => {
     defaultValues: {
       name: "",
       price: 0,
-      category: "",
+      category_id: "",
       image: "",
+      description: "",
+      quantity: 0,
     },
   });
 
@@ -69,8 +73,10 @@ const ProductEdit = () => {
       form.reset({
         name: product.name,
         price: product.price,
-        category: product.category?.toString(),
+        category_id: product.category_id?.toString(),
         image: product.image,
+        quantity: product.quantity,
+        description: product.description,
       });
     }
   }, [product, form]);
@@ -124,14 +130,14 @@ const ProductEdit = () => {
           />
           <FormField
             control={form.control}
-            name="category"
+            name="category_id"
             render={({ field }) => (
               <FormItem>
                 <FormLabel htmlFor="category">Danh mục</FormLabel>
                 <FormControl>
                   <Select
                     onValueChange={(value) => field.onChange(value)}
-                    value={field.value}
+                    value={field.value?.toString()}
                   >
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Chọn danh mục" />
@@ -164,6 +170,32 @@ const ProductEdit = () => {
                 <FormLabel htmlFor="image">Ảnh</FormLabel>
                 <FormControl>
                   <Input {...field} id="image" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="description">Description</FormLabel>
+                <FormControl>
+                  <Input {...field} id="description" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="quantity"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="quantity">Quantity</FormLabel>
+                <FormControl>
+                  <Input {...field} id="quantity" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
