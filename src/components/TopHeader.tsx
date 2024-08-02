@@ -1,10 +1,11 @@
 import { ChevronDown, Search, ShoppingCart, UserRound } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface FormValues {
   keywords: string | number;
 }
+
 const TopHeader = () => {
   const { register, handleSubmit } = useForm<FormValues>();
   const navigate = useNavigate();
@@ -13,38 +14,37 @@ const TopHeader = () => {
     // console.log(keywords);
     navigate(`/search?keyword=${keywords}`);
   };
+
   return (
-    <div className="flex pt-5">
-      <div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="search w-[552px] h-[42px] bg-white rounded flex items-center justify-between px-4 ml-36"
-        >
-          <input
-            {...register("keywords")}
-            className="text-[12.89px] font-light w-full h-full border-none focus:outline-none focus:ring-0 focus:border-transparent"
-            placeholder="Suchen Sie nach Produkten, Marken und mehr"
-          />
-          <button type="submit">
-            <Search className="w-4 h-4 text-slate-600" />
-          </button>
-        </form>
+    <div className="flex pt-5 items-center">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="search w-[552px] h-[42px] bg-white rounded flex items-center justify-between px-4 ml-36"
+      >
+        <input
+          {...register("keywords")}
+          className="text-[12px] font-light w-full h-full border-none focus:outline-none focus:ring-0 focus:border-transparent"
+          placeholder="Tìm kiếm sản phẩm, thương hiệu và hơn thế nữa"
+        />
+        <button type="submit">
+          <Search className="w-4 h-4 text-slate-600" />
+        </button>
+      </form>
+
+      <div className="language text-[14px] text-white flex items-center ml-8">
+        <p className="font-medium">Vi</p>
+        <ChevronDown className="w-4 h-4 text-white ml-1" />
       </div>
 
-      <div className="language text-[16px] text-white flex items-center ml-36">
-        <p className="font-medium">En</p>
-        <ChevronDown className="w-4 h-4 text-white ml-2" />
-      </div>
-
-      <div className="action flex space-x-7 ml-44">
-        <div className="text-white flex items-center">
+      <div className="action text-[14px] text-white flex items-center ml-8 space-x-4">
+        <div className="flex items-center">
           <UserRound className="w-5 h-5 mr-1" />
-          <p>Account</p>
+          <Link to={"/signin"}>Tài khoản</Link>
         </div>
 
-        <div className="text-white flex items-center">
+        <div className="flex items-center">
           <ShoppingCart className="w-5 h-5 mr-1" />
-          <p>Cart</p>
+          <p>Giỏ hàng</p>
         </div>
       </div>
     </div>

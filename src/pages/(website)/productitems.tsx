@@ -1,7 +1,7 @@
 import { IProduct } from "@/common/types/product";
 import instance from "@/config/axios";
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import Category from "./category";
 import ShortBy from "./shortby";
 
@@ -9,6 +9,7 @@ const Productitems = () => {
   const [searchParams] = useSearchParams();
   const [products, setProducts] = useState<IProduct[]>([]);
   const [keywords, setKeywords] = useState<string>("");
+  const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -30,9 +31,25 @@ const Productitems = () => {
     fetchProducts();
   }, [searchParams]);
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const { data } = await instance.get(`/products?category_id=${id}`);
+        setProducts(data);
+        setKeywords(`Category ID: ${id}`);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
+
+    if (id) {
+      fetchProducts();
+    }
+  }, [id]);
+
   return (
     <>
-      <div className="inline-block mt-4">
+      <div className="inline-block mt-4 ml-[300px]">
         <ShortBy />
         <span className="flex">
           kết quả tìm kiếm: <p className="pl-3 font-bold">{keywords}</p>{" "}

@@ -9,7 +9,7 @@ const ProductTop = () => {
   });
   return (
     <div>
-      <div className="container mt-[50px] mb-[50px]">
+      <div className="container mt-[50px] mb-[50px] mx-auto">
         <div className="flex flex-wrap gap-y-6 gap-x-7 items-center justify-start ml-16 ">
           {cate?.map((category: ICategories) => (
             <div className="flex items-center   px-[6px] py-2 bg-[#D2E8CD] rounded w-[193px] cursor-pointer">

@@ -15,8 +15,8 @@ const Rate = () => {
     queryFn: () => GetProductById(id as string),
   });
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading product details</div>;
+  if (isLoading) return <div>Đang tải...</div>;
+  if (error) return <div>Lỗi khi tải thông tin sản phẩm</div>;
   return (
     <>
       <div className="mt-[57px] flex">
@@ -36,7 +36,7 @@ const Rate = () => {
         </div>
 
         <button className="w-[119px] h-[34px] bg-[#4E7C32] text-white rounded-xl text-[14px] font-normal ml-[365px]">
-          Write reviews
+          Viết đánh giá
         </button>
       </div>
 
@@ -45,7 +45,7 @@ const Rate = () => {
           <li className="flex items-center">
             <p className="text-[20px]">1</p>
             <Star className="ml-2" height={22} />
-            <div className="w-[448px]  h-[10px] bg-[#A2A0A0] rounded-[1.478px] ml-[10px] mr-1"></div>{" "}
+            <div className="w-[448px] h-[10px] bg-[#A2A0A0] rounded-[1.478px] ml-[10px] mr-1"></div>{" "}
             (388)
           </li>
           <li className="flex items-center">
@@ -73,19 +73,19 @@ const Rate = () => {
 
       <div className="comment mt-[166px] flex">
         <div className="w-1/2 pr-4">
-          <div>
+          <div className="mt-[130px]">
             <span className="flex items-center">
               <h3 className="text-[#4E7C32] text-[16px] font-normal mr-[23px]">
-                Aman gupta
+                Chinh
               </h3>
               <img className="h-full" src={img2} />
             </span>
             <p className="w-[382px] h-[64px] text-[11px] text-[#665345]">
-              I've been using this cleanser for about five or six months now and
-              my acne is almost completely gone. I really struggled for years
-              with my skin and tried everything possible but this is the only
-              thing that managed to clear up my skin. 100% recommend and will
-              continue to use is for sure.
+              Tôi đã sử dụng sản phẩm tẩy rửa này khoảng năm hoặc sáu tháng và
+              mụn của tôi gần như đã biến mất hoàn toàn. Tôi đã gặp khó khăn
+              trong nhiều năm với làn da của mình và đã thử mọi cách có thể,
+              nhưng đây là sản phẩm duy nhất giúp làn da tôi sạch sẽ. Tôi hoàn
+              toàn khuyên dùng và chắc chắn sẽ tiếp tục sử dụng.
             </p>
           </div>
         </div>
@@ -93,39 +93,39 @@ const Rate = () => {
           <div className="mb-4">
             <span className="flex items-center">
               <h3 className="text-[#4E7C32] text-[16px] font-normal mr-[23px]">
-                Aman gupta
+                Phong
               </h3>
               <img className="h-full" src={img2} />
             </span>
             <p className="w-[382px] h-[64px] text-[11px] text-[#665345]">
-              I've been using this cleanser for about five or six months now and
-              my acne is almost completely gone. I really struggled for years
-              with my skin and tried everything possible but this is the only
-              thing that managed to clear up my skin. 100% recommend and will
-              continue to use is for sure.
+              Tôi đã sử dụng sản phẩm tẩy rửa này khoảng năm hoặc sáu tháng và
+              mụn của tôi gần như đã biến mất hoàn toàn. Tôi đã gặp khó khăn
+              trong nhiều năm với làn da của mình và đã thử mọi cách có thể,
+              nhưng đây là sản phẩm duy nhất giúp làn da tôi sạch sẽ. Tôi hoàn
+              toàn khuyên dùng và chắc chắn sẽ tiếp tục sử dụng.
             </p>
           </div>
           <div className="mt-10">
             <span className="flex items-center">
               <h3 className="text-[#4E7C32] text-[16px] font-normal mr-[23px]">
-                Aman gupta
+                Hoang
               </h3>
               <img className="h-full" src={img2} />
             </span>
             <p className="w-[382px] h-[64px] text-[11px] text-[#665345]">
-              I've been using this cleanser for about five or six months now and
-              my acne is almost completely gone. I really struggled for years
-              with my skin and tried everything possible but this is the only
-              thing that managed to clear up my skin. 100% recommend and will
-              continue to use is for sure.
+              Tôi đã sử dụng sản phẩm tẩy rửa này khoảng năm hoặc sáu tháng và
+              mụn của tôi gần như đã biến mất hoàn toàn. Tôi đã gặp khó khăn
+              trong nhiều năm với làn da của mình và đã thử mọi cách có thể,
+              nhưng đây là sản phẩm duy nhất giúp làn da tôi sạch sẽ. Tôi hoàn
+              toàn khuyên dùng và chắc chắn sẽ tiếp tục sử dụng.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center mt-[35px]">
+      <div className="flex justify-center content-center mt-[35px]">
         <button className="w-[59px] h-[20px] bg-[#4E7C32] text-white text-[12px] rounded-[8.097px]">
-          See all
+          Xem tất cả
         </button>
       </div>
     </>

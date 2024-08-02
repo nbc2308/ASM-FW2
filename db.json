@@ -95,5 +95,21 @@
       "image": "https://picsum.photos/500",
       "id": 8
     }
+  ],
+  "users": [
+    {
+      "email": "bachinh456@gmail.com",
+      "password": "$2a$10$54mlBAzlWQITOgNwzDn0due9t/Yo5duwoAJDZbMrSd44/1phiRfYe",
+      "name": "bachinh456",
+      "confirmPassword": "123456",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$JenRMBwfA.W0GcI99cMf0eE0jU8OS.U8lWLIykgoPKQfwfceoU9ne",
+      "name": "admin",
+      "confirmPassword": "123456",
+      "id": 2
+    }
   ]
 }

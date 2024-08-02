@@ -4,9 +4,9 @@ import ProductTop from "./products-top";
 
 const Product = () => {
   return (
-    <div>
+    <div className="">
       <div
-        className=" h-[163px] flex items-center pl-[156px]"
+        className="h-[163px] flex items-center pl-[156px]"
         style={{
           background: "linear-gradient(to left, #F9F3EE 0%, #B5DCB0 100%)",
         }}

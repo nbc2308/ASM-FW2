@@ -28,20 +28,20 @@ const Category = () => {
 
   return (
     <div>
-      <div className="container mt-20">
-        <h2 className="text-[#505F4E] font-bold text-[30px] tracking-[1.05px] capitalize">
+      <div className="mt-20">
+        <h1 className="text-[#505F4E] font-light text-[30px] tracking-[1.05px] capitalize ml-[120px]">
           Kategorien
-        </h2>
+        </h1>
       </div>
-      <div className="separate h-[2px] bg-[#0000001a]"></div>
-      <div className="container">
+      <div className="separate h-[2px] bg-[#0000001a] mt-[21px]"></div>
+      <div className="container mx-auto mt-[48px]">
         <div className="cate grid grid-cols-4 gap-x-[20px] gap-y-[12px]">
           {categories.map((category: ICategories) => (
             <div
               key={category.id}
               className="item opacity-65 hover:opacity-100 cursor-pointer relative rounded"
             >
-              <Link to={`/products?category_ids[]=${category.id}`}>
+              <Link to={`/category/${category.id}`}>
                 <img
                   src={category.image}
                   alt={category.name}

@@ -6,34 +6,37 @@ import Rate from "./rate";
 const ProductDetail = () => {
   return (
     <>
-      <div className="flex ml-[202px] pt-[107px]">
+      <div className="flex pt-[107px] justify-center content-center">
         <SelectImage />
         <Productinformation />
       </div>
 
-      <div className="mt-[162px]">
-        <h3 className="font-normal text-[30px] text-[#4E7C32]">Description</h3>
-        <p className="w-[952px] h-[90px] tracking-wider leading-relaxed text-[#665345] text-[20px] font-light mt-[5px]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled i
-        </p>
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="mt-[162px]">
+          <h3 className="font-normal text-[30px] text-[#4E7C32]">Mô tả</h3>
+          <p className="w-[952px] h-[90px] tracking-wider leading-relaxed text-[#665345] text-[20px] font-light mt-[5px]">
+            Lorem Ipsum là văn bản giả được sử dụng trong ngành in ấn và sắp xếp
+            chữ. Lorem Ipsum đã trở thành văn bản giả chuẩn của ngành kể từ
+            những năm 1500, khi một thợ in không rõ tên đã lấy một bản chữ cái
+            và xáo trộn nó
+          </p>
+        </div>
+
+        <div className="mt-[30px]">
+          <h3 className="font-normal text-[30px] text-[#4E7C32]">
+            Về sản phẩm
+          </h3>
+          <p className="w-[952px] h-[90px] tracking-wider leading-relaxed text-[#665345] text-[20px] font-light mt-[5px]">
+            Lorem Ipsum là văn bản giả được sử dụng trong ngành in ấn và sắp xếp
+            chữ. Lorem Ipsum đã trở thành văn bản giả chuẩn của ngành kể từ
+            những năm 1500, khi một thợ in không rõ tên đã lấy một bản chữ cái
+            và xáo trộn nó
+          </p>
+        </div>
+
+        <Rate />
       </div>
 
-      <div>
-        <h3 className="font-normal text-[30px] text-[#4E7C32] mt-[30px]">
-          About
-        </h3>
-        <p className="w-[952px] h-[90px] tracking-wider leading-relaxed text-[#665345] text-[20px] font-light mt-[5px]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled i
-        </p>
-      </div>
-
-      <Rate />
       <Contact />
     </>
   );

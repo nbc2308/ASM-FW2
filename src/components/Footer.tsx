@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="h-full">
         <div className="w-[1058px] h-[180px] mx-auto pt-4 text-[#F9F3EE] flex">
           <div className="w-[307px] h-[116px]">
-            <p className="text-[12.55px]  mt-[37px] text-justify">
+            <p className="text-[12.55px] mt-[37px] text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
@@ -87,38 +87,38 @@ const Footer = () => {
 
           <div className="w-[161px] h-[200px] ml-[67px]">
             <span>
-              <h3>Um</h3>
+              <h3>Chúng tôi</h3>
               <div className="text-[11px] space-y-6 mt-3">
-                <p>Kontaktiere uns</p>
-                <p>Über uns</p>
-                <p>Karriere</p>
-                <p>Unternehmensinformationen</p>
+                <p>Liên hệ với chúng tôi</p>
+                <p>Về chúng tôi</p>
+                <p>Ngành nghề</p>
+                <p>Thông tin công ty</p>
               </div>
             </span>
           </div>
 
           <div className="w-[161px] h-[200px] ml-[67px]">
             <span>
-              <h3>Hilfe</h3>
+              <h3>Trợ giúp</h3>
               <div className="text-[11px] space-y-6 mt-3">
-                <p>Unsere Produzenten</p>
-                <p>Zahlung</p>
-                <p>Versand</p>
-                <p>Stornierung & Rückgabe</p>
-                <p>Verstoß melden</p>
+                <p>Nhà sản xuất của chúng tôi</p>
+                <p>Thanh toán</p>
+                <p>Vận chuyển</p>
+                <p>Hủy bỏ & Hoàn trả</p>
+                <p>Báo cáo vi phạm</p>
               </div>
             </span>
           </div>
 
           <div className="w-[161px] h-[200px] ml-[67px]">
             <span>
-              <h3>pOLITIK</h3>
+              <h3>Chính sách</h3>
               <div className="text-[11px] space-y-6 mt-3">
-                <p>Rücknahmegarantie</p>
-                <p>Nutzungsbedingungen</p>
-                <p>Sicherheit</p>
-                <p>Privatsphäre</p>
-                <p>Seitenverzeichnis</p>
+                <p>Đảm bảo hoàn trả</p>
+                <p>Điều khoản sử dụng</p>
+                <p>Bảo mật</p>
+                <p>Quyền riêng tư</p>
+                <p>Mục lục</p>
               </div>
             </span>
           </div>
@@ -126,7 +126,7 @@ const Footer = () => {
       </div>
       <div className="h-[43px] bg-[#062F21] flex items-center">
         <p className="text-white text-[11.71px] ml-[205px] float-left mr-[375px]">
-          2023 hood.de , Inc.
+          2023 hood.de, Inc.
         </p>
 
         <div className="inline-block">
@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
 
         <p className="float-end text-[10px] text-white flex justify-center items-center ml-[338px]">
-          Scroll to top <MoveUp width={15} />
+          Cuộn lên trên <MoveUp width={15} />
         </p>
       </div>
     </div>
