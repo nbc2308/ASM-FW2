@@ -9,20 +9,21 @@ const ProductTop = () => {
   });
   return (
     <div>
-      <div className="products text-[#665345] text-[15px] font-semibold flex space-x-[92px] mt-[32px] ml-[128px] mb-[118px]">
-        {cate.map((item: ICategories, index: number) => (
-          <div
-            key={index}
-            className="w-[193px] h-[61px] bg-[#D2E8CD] flex items-center justify-center"
-          >
-            <img
-              width={60}
-              src="../src/assets/image/products/dedww 1.png"
-              className="mr-2"
-            />
-            <p>{item.name}</p>
-          </div>
-        ))}
+      <div className="container mt-[50px] mb-[50px]">
+        <div className="flex flex-wrap gap-y-6 gap-x-7 items-center justify-start ml-16 ">
+          {cate?.map((category: ICategories) => (
+            <div className="flex items-center   px-[6px] py-2 bg-[#D2E8CD] rounded w-[193px] cursor-pointer">
+              <img
+                className="bg-transparent mr-[3px]"
+                src="../src/assets/image/products/dedww 1.png"
+                alt=""
+              />
+              <h3 className="hover:text-white text-[#665345] capitalize font-semibold text-[15px]">
+                {category.name}
+              </h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

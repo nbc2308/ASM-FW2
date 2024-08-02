@@ -3,6 +3,7 @@ import { ICategories } from "@/common/types/category";
 import { IProduct } from "@/common/types/product";
 import { GetAllCate } from "@/services/category";
 import { GetAllProducts } from "@/services/product";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const { data: categories = [] } = useQuery<ICategories[]>({
@@ -40,11 +41,13 @@ const Category = () => {
               key={category.id}
               className="item opacity-65 hover:opacity-100 cursor-pointer relative rounded"
             >
-              <img
-                src={category.image}
-                alt={category.name}
-                className="object-cover max-w-full"
-              />
+              <Link to={`/products?category_ids[]=${category.id}`}>
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="object-cover max-w-full"
+                />
+              </Link>
               <div className="body absolute right-[15px] top-[20px]">
                 <h3 className="text-white text-[18px] font-semibold leading-[20px]">
                   {category.name}
